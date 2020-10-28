@@ -6,10 +6,15 @@ const dataServer = Object.create(
             value: 'gallery'
         },
         address: {
+            //здесь должен быть указан  верный домен
             value: 'http://serverImages.ru/getListFiles.php'
         }
     })
 let serverResponse = null;
+
+window.onload = () =>{
+    document.getElementById("getData").addEventListener("click", getDataFromServer());
+}
 
 function getDataFromServer(){
     return new Promise((resolve, reject) => {
