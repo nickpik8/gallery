@@ -9,7 +9,7 @@
     </head>
     <body>
         <div id="menu" class="invisible">
-            <button onclick="getDataFromServer();">Получить данные</button>
+            <button id="getData">Получить данные</button>
             <a href="/json">Галерея</a>
             <a href="/json">Загрузка изображений</a>
             <a href="/json">Информация</a>
