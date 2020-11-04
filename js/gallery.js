@@ -13,7 +13,7 @@ let minWidthElement = 100;
 //let serverResponse = null;
 //let sResponses = null;
 
-let dataPromise = getDataFromServer();   
+let dataPromise = getDataFromServer(dataServerGallery);   
 dataPromise.then(data =>{
     countImages = data.length;
     for (let i = 0; i < countImages - 1; i++){

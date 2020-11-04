@@ -1,13 +1,12 @@
 //import * as config from 'configServer.js';
-const dataServer = Object.create(
+const dataServerGallery = Object.create(
     {},
     {
         name: {
             value: 'gallery'
         },
         address: {
-            //здесь должен быть указан  верный домен
-            value: 'http://serverImages.ru/getListFiles.php'
+            value: 'http://gallery-master.ru/getListFiles.php'
         }
     })
 let serverResponse = null;
@@ -16,7 +15,7 @@ window.onload = () =>{
     document.getElementById("getData").addEventListener("click", getDataFromServer());
 }
 
-function getDataFromServer(){
+function getDataFromServer(dataServer){
     return new Promise((resolve, reject) => {
         let server = new XMLHttpRequest();
         server.open('GET', dataServer.address);
